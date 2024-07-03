@@ -1,0 +1,28 @@
+div input{
+    border-radius: 5px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(207 250 254 / var(--tw-bg-opacity));
+    padding: 1rem;
+    outline: none;
+}
+
+div button{
+    background-color: black;
+    color: aliceblue;
+    border-radius: 5px;
+    padding: 2%;
+}
+div button:hover{
+    background-color: rgb(32, 31, 31);
+}
+.signupbtn{
+    background-color: rgb(255, 0, 0);
+    color: aliceblue;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+.signupbtn:hover{
+    background-color: rgb(176, 31, 31);
+    transition: 0.5s;
+}
