@@ -1,15 +1,20 @@
 import React from 'react'
 import classes from './signup.module.css';
 import { Link, redirect, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { signInSuccess } from '../store/user/userSlice';
 
 const Signin = () => {
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
 
   async function handleSubmit(event){
     event.preventDefault();
-    const formData = new FormData(event.target);
     
+
+    const formData = new FormData(event.target);  
     const password = formData.get('password');
     const email = formData.get('email');
 
@@ -29,6 +34,7 @@ const Signin = () => {
     )
 
     if(res.ok){
+      dispatch(signInSuccess());
       navigate('/');
     }
   }
